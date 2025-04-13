@@ -1,5 +1,4 @@
-function(){
-
+(()=>{
     var rssItems = [];
 
     function viewPost2(index) {
@@ -58,4 +57,4 @@ function(){
     function getRssData(item, field) {
         return item.querySelector(field).textContent;
     }
-}();
+})();
