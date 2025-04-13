@@ -48,7 +48,7 @@
                 html += `<li class='blogListItem'><span class='blogItemDate'>${buildDate(newItem)}</span><span class='p button'><a role='button' onclick='viewPost2(${rssItems.length});'><h3>${newItem.title}</h3></a></span><span class="p">${newItem.content.substring(0, 50)}...</span></li>`;
             });
             html += "</ul>";
-            return htmml;
+            return html;
 //            document.getElementById("rss-feed").innerHTML = html; // Replace "rss-feed" with the ID of your target element
         });
     }
