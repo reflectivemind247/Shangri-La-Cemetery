@@ -30,7 +30,7 @@
         return `${day} ${month} ${year}`;
     }
 
-    function getRssAsHtml() {        
+    function loadRssAsHtml(elId) {        
         fetch('https://reflectivemind247.github.io/Shangri-La-Cemetery/feed.xml') // Replace with your RSS feed URL
             .then(response => response.text())
             .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
@@ -48,8 +48,7 @@
                 html += `<li class='blogListItem'><span class='blogItemDate'>${buildDate(newItem)}</span><span class='p button'><a role='button' onclick='viewPost2(${rssItems.length});'><h3>${newItem.title}</h3></a></span><span class="p">${newItem.content.substring(0, 50)}...</span></li>`;
             });
             html += "</ul>";
-            return html;
-//            document.getElementById("rss-feed").innerHTML = html; // Replace "rss-feed" with the ID of your target element
+            document.getElementById(elId).innerHTML = html; // Replace "rss-feed" with the ID of your target element
         });
     }
 
