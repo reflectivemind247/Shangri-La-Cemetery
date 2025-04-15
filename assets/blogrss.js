@@ -56,7 +56,7 @@
 
     function getPostImage(item) {
         try {
-            return item.querySelector("summary").nextSibling.attributes['url'];
+            return item.querySelector("summary").nextSibling.attributes['url'].textContent;
         }
         catch (e) {
         }
