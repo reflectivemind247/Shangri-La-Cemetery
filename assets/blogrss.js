@@ -60,6 +60,7 @@
         }
         catch (e) {
         }
+        return "";
     }
 
     function getRssData(item, field) {
