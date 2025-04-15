@@ -1,7 +1,7 @@
 ---
 title: Your Last Will And Testiment
 date: 2025-03-01
-imageurl: https://reflectivemind247.github.io/Shangri-La-Cemetery/assets/lastwill.jpg
+imageurl: https://reflectivemind247.github.io/Shangri-La-Cemetery/assets/lastwill.png
 ---
 ![Image or Last Will and Testimant document](page.imageurl)
 In your last will and testament, you can simply request that your ashes be sent one day without an urn in a padded envelope by airmail to the address below:
