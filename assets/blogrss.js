@@ -41,7 +41,7 @@
 
             let html = "<ul>";
             items.forEach(item => {
-                let newItem =  { title: getRssData(item,'title'), created: getRssData(item,'published'), content: getRssData(item,'content'), imageurl: getRssData(item, 'imageurl') };
+                let newItem =  { title: getRssData(item,'title'), created: getRssData(item,'published'), content: getRssData(item,'content'), imageurl: getRssData(item, 'image') };
 
                 rssItems.push(newItem);
 
