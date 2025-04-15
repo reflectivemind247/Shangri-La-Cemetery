@@ -45,7 +45,7 @@
 
                 rssItems.push(newItem);
 
-                html += `<li class='blogListItem'><span class='blogItemDate'>${buildDate(newItem)}</span><span class='p button blogItemTitle'><a role='button' onclick='viewPost2(${rssItems.length});'><h3>${newItem.title}</h3></a></span><span class="p blogHighlight">${string.trimEnd(newItem.content.substring(0, 75))}...</span></li>`;
+                html += `<li class='blogListItem'><span class='blogItemDate'>${buildDate(newItem)}</span><span class='p button blogItemTitle'><a role='button' onclick='viewPost2(${rssItems.length});'><h3>${newItem.title}</h3></a></span><span class="p blogHighlight">${newItem.content.substring(0, 75).trimEnd();}...</span></li>`;
             });
             html += "</ul>";
             const t = window.setTimeout(() => {
