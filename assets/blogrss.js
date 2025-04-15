@@ -5,7 +5,7 @@
         document.getElementById("viewDate").innerText = buildDate(item);
         document.getElementById("viewTitle").innerText = item.title;
         document.getElementById("viewContent").innerHTML = item.content;
-        document.getElementById("viewImage").src = item.querySelector("imageurl").textContent;
+        document.getElementById("viewImage").src = item.imageurl;
         document.getElementById("postView").classList.remove("hidden");
         document.getElementById("rss-feed").classList.add("hidden");
     }
