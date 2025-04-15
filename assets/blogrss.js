@@ -41,7 +41,7 @@
 
             let html = "<ul>";
             items.forEach(item => {
-                let newItem =  { title: getRssData(item,'title'), created: getRssData(item,'published'), content: getRssData(item,'content'), imageurl: getRssData(item, 'image') };
+                let newItem =  { title: getRssData(item,'title'), created: getRssData(item,'published'), content: getRssData(item,'content'), imageurl: getPostImage(item) };
 
                 rssItems.push(newItem);
 
@@ -52,6 +52,14 @@
                 document.getElementById(elId).innerHTML = html; // Replace "rss-feed" with the ID of your target element
             }, 100);
         });
+    }
+
+    function getPostImage(item) {
+        try {
+            return item.querySelector("summary").nextSibling.attributes['url'];
+        }
+        catch (e) {
+        }
     }
 
     function getRssData(item, field) {
