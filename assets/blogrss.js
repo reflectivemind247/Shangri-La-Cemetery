@@ -41,7 +41,7 @@
 
             let html = "<ul>";
             items.forEach(item => {
-                let newItem =  { title: getRssData(item,'title'), created: getRssData(item,'published'), content: getRssData(item,'content') };
+                let newItem =  { title: getRssData(item,'title'), created: getRssData(item,'published'), content: getRssData(item,'content'), imageurl: getRssData(item, 'imageurl') };
 
                 rssItems.push(newItem);
 
@@ -55,5 +55,11 @@
     }
 
     function getRssData(item, field) {
-        return item.querySelector(field).textContent;
+        try {
+            return item.querySelector(field).textContent;
+        }
+        catch (e) {
+            console.log("ERROR: getRssData: " + e.message);
+        }
+        return "";
     }
